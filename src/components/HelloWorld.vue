@@ -132,6 +132,7 @@ export default {
 			for (const prefix of this.prefixes) {
 				for (const sufix of this.sufixes) {
 					this.domains.push(prefix + sufix);
+					this.domains.push(sufix + prefix);
 				}
 			}
 		},
