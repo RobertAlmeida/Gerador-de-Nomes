@@ -1,4 +1,5 @@
 # front-end
+My first project with Vuejs
 
 ## Project setup
 ```
