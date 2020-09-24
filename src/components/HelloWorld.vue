@@ -37,7 +37,7 @@
                   v-model="prefix"
                   placeholder="Digite o prefixo"
                   v-on:keyup.enter="addprefix(prefix)"
-                />
+                 required />
                 <div class="input-group-append">
                   <button class="btn btn-info" v-on:click="addprefix(prefix)">
                     <span class="fa fa-plus"></span>
@@ -75,7 +75,7 @@
                   v-model="sufix"
                   placeholder="Digite o sufixo"
                   v-on:keyup.enter="addsufix(sufix)"
-                />
+                required />
                 <div class="input-group-append">
                   <button class="btn btn-info" v-on:click="addsufix(sufix)">
                     <span class="fa fa-plus"></span>
@@ -117,14 +117,24 @@ export default {
 	},
 	methods: {
 		addprefix(prefix) {
-			this.prefixes.push(prefix);
-			this.prefix = "";
-			this.generate();
+			if(prefix.length > 0) {
+				this.prefixes.push(prefix);
+				this.prefix = "";
+				this.generate();
+			}else {
+				alert("Insira o prefixo");
+			}
 		},
 		addsufix(sufix) {
-			this.sufixes.push(sufix);
-			this.sufix = "";
-			this.generate();
+
+			if(sufix.length > 0) {
+				this.sufixes.push(sufix);
+				this.sufix = "";
+				this.generate();
+      
+			}else {
+				alert("Insira o sufixo");
+			}
 		},
 
 		generate() {
