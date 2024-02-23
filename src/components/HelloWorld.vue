@@ -87,7 +87,7 @@
       </div>
       <br />
       <h5>
-        Domínios
+        Nomes Gerados
         <span class="badge badge-info">{{domains.length}}</span>
       </h5>
       <div class="card">
