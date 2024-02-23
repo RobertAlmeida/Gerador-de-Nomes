@@ -4,7 +4,6 @@
       Gerador de Nomes
       <span class="fa fa-check"></span>
     </h1>
-    <h6 class="text-secondary">Utilizando o VUEJS</h6>
   </div>
   <div id="main">
     <div class="container">
